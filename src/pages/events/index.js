@@ -124,7 +124,7 @@ export default function Speaker() {
 
 function Event({ date, img, event }) {
   return (
-    <Grid2 xs={12} sm={3}>
+    <Grid2 xs={12} sm={4} md={3}>
       <Box
         sx={{
           display: "flex",

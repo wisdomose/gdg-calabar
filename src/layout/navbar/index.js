@@ -16,10 +16,6 @@ import { useState } from "react";
 
 const pages = [
   {
-    path: "/",
-    label: "Home",
-  },
-  {
     path: "/contact",
     label: "Contact",
   },

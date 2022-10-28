@@ -1,0 +1,46 @@
+[debug] [2022-10-28T15:11:10.310Z] ----------------------------------------------------------------------
+[debug] [2022-10-28T15:11:10.315Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Wisdom Ose\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-10-28T15:11:10.316Z] CLI Version:   11.15.0
+[debug] [2022-10-28T15:11:10.316Z] Platform:      win32
+[debug] [2022-10-28T15:11:10.317Z] Node Version:  v16.14.2
+[debug] [2022-10-28T15:11:10.319Z] Time:          Fri Oct 28 2022 16:11:10 GMT+0100 (West Africa Standard Time)
+[debug] [2022-10-28T15:11:10.319Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-10-28T15:11:10.468Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-28T15:11:10.469Z] > authorizing via signed-in user (wisdomose05@gmail.com)
+[debug] [2022-10-28T15:11:10.469Z] [iam] checking project gdg-calabar for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-10-28T15:11:10.472Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/gdg-calabar:testIamPermissions [none]
+[debug] [2022-10-28T15:11:10.473Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/gdg-calabar:testIamPermissions x-goog-quota-user=projects/gdg-calabar
+[debug] [2022-10-28T15:11:10.473Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/gdg-calabar:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-10-28T15:11:12.109Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/gdg-calabar:testIamPermissions 200
+[debug] [2022-10-28T15:11:12.109Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/gdg-calabar:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-10-28T15:11:12.110Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/gdg-calabar [none]
+[debug] [2022-10-28T15:11:12.862Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/gdg-calabar 200
+[debug] [2022-10-28T15:11:12.863Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/gdg-calabar {"projectId":"gdg-calabar","projectNumber":"103381577333","displayName":"gdg-calabar","name":"projects/gdg-calabar","resources":{"hostingSite":"gdg-calabar"},"state":"ACTIVE","etag":"1_8f5cf953-3093-4288-b252-de16d87f217e"}
+[info] 
+[info] === Deploying to 'gdg-calabar'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-10-28T15:11:12.880Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/gdg-calabar/versions [none]
+[debug] [2022-10-28T15:11:12.880Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/gdg-calabar/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-10-28T15:11:14.716Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/gdg-calabar/versions 200
+[debug] [2022-10-28T15:11:14.717Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/gdg-calabar/versions {"name":"projects/103381577333/sites/gdg-calabar/versions/d1e9b3fa42b715a5","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[gdg-calabar]: beginning deploy... 
+[info] i  hosting[gdg-calabar]: found 13 files in build 
+[debug] [2022-10-28T15:11:14.744Z] [hosting] uploading with 200 concurrency
+[debug] [2022-10-28T15:11:15.644Z] [hosting] hash cache [YnVpbGQ] stored for 13 files
+[debug] [2022-10-28T15:11:15.644Z] [hosting][hash queue][FINAL] {"max":884,"min":6,"avg":116.6923076923077,"active":0,"complete":13,"success":13,"errored":0,"retried":0,"total":13,"elapsed":896}
+[debug] [2022-10-28T15:11:15.645Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/103381577333/sites/gdg-calabar/versions/d1e9b3fa42b715a5:populateFiles [none]
+[debug] [2022-10-28T15:11:15.646Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/103381577333/sites/gdg-calabar/versions/d1e9b3fa42b715a5:populateFiles {"files":{"/logo.webp":"7dd21ba9291b3c5af325394a62058a38cc945bcd24388fbb703781f3d0482a88","/manifest.json":"12cfc9718924aa7f5bd6d4e1b989a0af9bb22aa21ecc6997680687b4f1741af3","/robots.txt":"bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49","/asset-manifest.json":"56c351c0b3ddf8da03db40470419b405723b534986f9ce025045520912234828","/index.html":"503d50729be8e541a0ba7575bb5788945f54a3e09e075858e15d6d618b225892","/static/css/main.845c8071.css":"fef0467d6a03a821de0f3d1107a67f7fcc852917290f2a9785e76feb620e4805","/static/css/main.845c8071.css.map":"50a7a3997857240e25b6210380e133515a469bebd7ec2e163a895f6e9bf76c67","/static/js/787.a7c9885a.chunk.js":"d076f190e34cf4c3675f3274fa3e48b8629d8084248a92d6547d66ef64a02dc7","/static/js/main.baf7e24b.js.LICENSE.txt":"4b9365de2de5adaac8c9dedc67daf2d531eb9569d0bb78ff82f7b0980ff4a13e","/static/js/787.a7c9885a.chunk.js.map":"744cbb0a412763a43eb6b62460cdcf0075b9ffe2b4b75229c7089afa69b7d6b2","/static/media/logo.f2791e66c8af9f21454f.png":"e60f072fb75072de8ae57236f20a49a662fe9d2802c1842db63533cbbdddeb7e","/static/js/main.baf7e24b.js":"28e3fe242eee77dd536256de1a68b0ace9a90421527570be036e7f09dad53dec","/static/js/main.baf7e24b.js.map":"3d182b1073659410f87feb8264bf17c3b8ab8561acf55f3289b23bbf1115f47c"}}
+[debug] [2022-10-28T15:11:17.324Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/103381577333/sites/gdg-calabar/versions/d1e9b3fa42b715a5:populateFiles 200
+[debug] [2022-10-28T15:11:17.324Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/103381577333/sites/gdg-calabar/versions/d1e9b3fa42b715a5:populateFiles {"uploadRequiredHashes":["28e3fe242eee77dd536256de1a68b0ace9a90421527570be036e7f09dad53dec","3d182b1073659410f87feb8264bf17c3b8ab8561acf55f3289b23bbf1115f47c","503d50729be8e541a0ba7575bb5788945f54a3e09e075858e15d6d618b225892","56c351c0b3ddf8da03db40470419b405723b534986f9ce025045520912234828"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/gdg-calabar/versions/d1e9b3fa42b715a5/files"}
+[debug] [2022-10-28T15:11:17.327Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/gdg-calabar/versions/d1e9b3fa42b715a5/files/28e3fe242eee77dd536256de1a68b0ace9a90421527570be036e7f09dad53dec [none]
+[debug] [2022-10-28T15:11:17.327Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/gdg-calabar/versions/d1e9b3fa42b715a5/files/28e3fe242eee77dd536256de1a68b0ace9a90421527570be036e7f09dad53dec [stream]
+[debug] [2022-10-28T15:11:17.330Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/gdg-calabar/versions/d1e9b3fa42b715a5/files/3d182b1073659410f87feb8264bf17c3b8ab8561acf55f3289b23bbf1115f47c [none]
+[debug] [2022-10-28T15:11:17.330Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/gdg-calabar/versions/d1e9b3fa42b715a5/files/3d182b1073659410f87feb8264bf17c3b8ab8561acf55f3289b23bbf1115f47c [stream]
+[debug] [2022-10-28T15:11:17.332Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/gdg-calabar/versions/d1e9b3fa42b715a5/files/503d50729be8e541a0ba7575bb5788945f54a3e09e075858e15d6d618b225892 [none]
+[debug] [2022-10-28T15:11:17.333Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/gdg-calabar/versions/d1e9b3fa42b715a5/files/503d50729be8e541a0ba7575bb5788945f54a3e09e075858e15d6d618b225892 [stream]
+[debug] [2022-10-28T15:11:17.335Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/gdg-calabar/versions/d1e9b3fa42b715a5/files/56c351c0b3ddf8da03db40470419b405723b534986f9ce025045520912234828 [none]
+[debug] [2022-10-28T15:11:17.335Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/gdg-calabar/versions/d1e9b3fa42b715a5/files/56c351c0b3ddf8da03db40470419b405723b534986f9ce025045520912234828 [stream]
+[debug] [2022-10-28T15:11:17.337Z] [hosting][populate queue][FINAL] {"max":1686,"min":1686,"avg":1686,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1696}
+[debug] [2022-10-28T15:11:17.337Z] [hosting] uploads queued: 4
