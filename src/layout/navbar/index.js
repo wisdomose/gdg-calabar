@@ -36,7 +36,7 @@ export default function NavBar({ isHome = false }) {
   return (
     <>
       <Box sx={{ display: "flex" }}>
-        <AppBar color={isHome ? "transparent" : "default"} position="fixed">
+        <AppBar color="transparent" position="fixed">
           <Toolbar>
             <Box sx={{ flexGrow: 1, display: { xs: "block", sm: "none" } }}>
               <IconButton
