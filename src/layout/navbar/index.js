@@ -56,7 +56,6 @@ export default function NavBar({ isHome = false }) {
                   style={{
                     height: "50px",
                     width: "auto",
-                    filter: "saturate(20)",
                   }}
                   alt="logo"
                 />
