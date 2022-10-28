@@ -20,12 +20,16 @@ const pages = [
     label: "Home",
   },
   {
-    path: "/speakers",
-    label: "Speakers",
+    path: "/contact",
+    label: "Contact",
   },
   {
     path: "/devfest",
-    label: "Devfest",
+    label: "DevFest",
+  },
+  {
+    path: "/events",
+    label: "Events",
   },
 ];
 
@@ -36,15 +40,15 @@ export default function NavBar({ isHome = false }) {
   return (
     <>
       <Box sx={{ display: "flex" }}>
-        <AppBar color="transparent" position="fixed">
+        <AppBar sx={{ background: "#fff" }} position="fixed">
           <Toolbar>
-            <Box sx={{ flexGrow: 1, display: { xs: "block", sm: "none" } }}>
+            <Box sx={{ display: { xs: "block", sm: "none" } }}>
               <IconButton
                 onClick={toggleOpen}
                 size="large"
                 edge="start"
                 aria-label="menu"
-                sx={{ mr: 2, color: "#ffffff" }}
+                sx={{ color: "#000000" }}
               >
                 <MenuIcon />
               </IconButton>

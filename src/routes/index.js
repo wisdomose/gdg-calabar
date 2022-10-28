@@ -1,6 +1,7 @@
 import Devfest from "../pages/devfest";
 import Home from "../pages/home";
-import Speaker from "../pages/speakers";
+import Events from "../pages/events";
+import Contact from "../pages/contact";
 
 const { createBrowserRouter } = require("react-router-dom");
 
@@ -10,12 +11,16 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: "/speakers",
-    element: <Speaker />,
+    path: "/events",
+    element: <Events />,
   },
   {
     path: "/devfest",
     element: <Devfest />,
+  },
+  {
+    path: "/contact",
+    element: <Contact />,
   },
 ]);
 

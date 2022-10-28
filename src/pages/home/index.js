@@ -1,4 +1,4 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Container, Typography } from "@mui/material";
 import NavBar from "../../layout/navbar";
 
 export default function Home() {
@@ -24,7 +24,7 @@ export default function Home() {
         {/* <Box component="section"> */}
         <Typography
           component="h1"
-          variant="h4"
+          variant="h3"
           sx={{
             color: "#ffffff",
             maxWidth: "700px",
@@ -35,10 +35,58 @@ export default function Home() {
         </Typography>
 
         {/* </Box> */}
-        <Button variant="contained" size="large" sx={{ marginTop: "16px" }}>
+        <Button
+          variant="contained"
+          size="large"
+          href="https://gdg.community.dev/events/details/google-gdg-calabar-presents-devfest-calabar-2022/"
+          target="_blank"
+          sx={{ marginTop: "16px" }}
+        >
           RSVP today
         </Button>
       </Box>
+
+      <Container>
+        <Box
+          as="section"
+          sx={{
+            my: 10,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          {/* heading */}
+          <Typography variant="h3">Sponsors</Typography>
+
+          {/* description */}
+          <Typography
+            component="p"
+            maxWidth="md"
+            sx={{
+              mt: 2,
+              textAlign: "center",
+              color: "#000000",
+            }}
+          >
+            The mission is to provide a learning professional with ways to share
+            kinowledge and expertise. To accomplish this mission we serve as a
+            catalyst for discussion, learning and motivation. We need your
+            collaboration to make this event the best it can be
+          </Typography>
+
+          {/* be a sponsor button */}
+          <Button
+            variant="contained"
+            target="_blank"
+            href="https://gdg.community.dev/events/details/google-gdg-calabar-presents-devfest-calabar-2022/"
+            size="large"
+            sx={{ marginTop: "16px" }}
+          >
+            Be a sponsor
+          </Button>
+        </Box>
+      </Container>
     </>
   );
 }
