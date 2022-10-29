@@ -65,46 +65,76 @@ export default function Home() {
 
       {/* sponsor */}
 
-      <Container>
-        <Box
-          as="section"
-          sx={{
-            mb: 10,
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
-          {/* heading */}
-          <Typography variant="h3">Sponsors</Typography>
+      <Container
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          mb: 20,
+        }}
+      >
+        {/* heading */}
+        <Typography variant="h3" sx={{ mb: 10 }}>
+          Sponsors
+        </Typography>
 
-          {/* description */}
-          <Typography
-            component="p"
-            maxWidth="md"
-            sx={{
-              mt: 2,
-              textAlign: "center",
-              color: "#000000",
-            }}
-          >
-            The mission is to provide a learning professional with ways to share
-            kinowledge and expertise. To accomplish this mission we serve as a
-            catalyst for discussion, learning and motivation. We need your
-            collaboration to make this event the best it can be
-          </Typography>
+        <Grid2 container spacing={{ xs: 2, sm: 8 }}>
+          <Grid2 sm={6}>
+            <Box sx={{ position: "relative" }}>
+              <img
+                src="https://img.freepik.com/free-photo/closeup-diverse-people-joining-their-hands_53876-96081.jpg?w=900&t=st=1667047473~exp=1667048073~hmac=e7902ba8b9b8dc0168120bd07d887c404240c28a0beae211be13906e83bba343"
+                // src="https://img.freepik.com/free-vector/business-conference-illustration-with-speaker-stage-audience-cartoon-characters-scientific-presentation-academic-symposium-professional-briefing_575670-644.jpg?w=740&t=st=1666968844~exp=1666969444~hmac=b498dc0ad678b0be113b53a717c4297b7b6ab601e13e077e99a66f51e8a24ce3"
+                style={{ width: "100%", height: "100%" }}
+              />
 
-          {/* be a sponsor button */}
-          <Button
-            variant="contained"
-            target="_blank"
-            href="https://gdg.community.dev/events/details/google-gdg-calabar-presents-devfest-calabar-2022/"
-            size="large"
-            sx={{ marginTop: "16px" }}
-          >
-            Be a sponsor
-          </Button>
-        </Box>
+              <Box
+                sx={{
+                  position: "absolute",
+                  inset: 0,
+                  filter: "blur(10px)",
+                  background: "rgba(10,10,10,0.2)",
+                  // opacity: 0.1,
+                }}
+              ></Box>
+            </Box>
+          </Grid2>
+          <Grid2 sm={6} sx={{ padding: 0 }}>
+            <Box
+              sx={{
+                height: "100%",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "start",
+                justifyContent: "center",
+              }}
+            >
+              {/* description */}
+              <Typography
+                component="p"
+                maxWidth="md"
+                sx={{
+                  color: "#000000",
+                }}
+              >
+                The mission is to provide a learning professional with ways to
+                share kinowledge and expertise. To accomplish this mission we
+                serve as a catalyst for discussion, learning and motivation. We
+                need your collaboration to make this event the best it can be
+              </Typography>
+
+              {/* be a sponsor button */}
+              <Button
+                variant="contained"
+                target="_blank"
+                href="https://gdg.community.dev/events/details/google-gdg-calabar-presents-devfest-calabar-2022/"
+                size="large"
+                sx={{ marginTop: "16px" }}
+              >
+                Be a sponsor
+              </Button>
+            </Box>
+          </Grid2>
+        </Grid2>
       </Container>
 
       {/* speaker */}
@@ -118,20 +148,29 @@ export default function Home() {
         }}
       >
         {/* heading */}
-        <Typography variant="h3" sx={{ mb: 10, mt: 20 }}>
+        <Typography variant="h3" sx={{ mb: 10 }}>
           Speakers
         </Typography>
 
-        <Grid2 container spacing={{xs:2, sm:8}}>
+        <Grid2 container spacing={{ xs: 2, sm: 8 }}>
           <Grid2 sm={6}>
-            <Box>
+            <Box sx={{ position: "relative" }}>
               <img
-                src="https://img.freepik.com/free-vector/business-conference-illustration-with-speaker-stage-audience-cartoon-characters-scientific-presentation-academic-symposium-professional-briefing_575670-644.jpg?w=740&t=st=1666968844~exp=1666969444~hmac=b498dc0ad678b0be113b53a717c4297b7b6ab601e13e077e99a66f51e8a24ce3"
+                src="https://miro.medium.com/max/720/0*07rSGHV8VeHVngnv"
                 style={{ width: "100%", height: "100%" }}
               />
+
+              <Box
+                sx={{
+                  position: "absolute",
+                  inset: 0,
+                  filter: "blur(10px)",
+                  background: "rgba(10,10,10,0.2)",
+                }}
+              ></Box>
             </Box>
           </Grid2>
-          <Grid2 sm={6}>
+          <Grid2 sm={6} sx={{ padding: 0 }}>
             <Box
               as="section"
               sx={{
@@ -139,7 +178,7 @@ export default function Home() {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "start",
-                justifyContent:"center"
+                justifyContent: "center",
               }}
             >
               {/* description */}
